@@ -156,7 +156,7 @@ console.log('mergeArrays:', mergeArrays([2, 4, 7, 10], [2, 3]));
 // Output: false
 
 function validMountainArray(arr) {
-    
-};
 
+ 
+}
 
