@@ -9,6 +9,7 @@ function doubleEvenNumbers(arr) {
     return arr;
   }
 
+ 
   
   const numbers = [1, 2, 3, 4, 5, 6];
   console.log('doubleEvenNumbers:',doubleEvenNumbers(numbers)); // Expected output: [1, 4, 3, 8, 5, 12]
