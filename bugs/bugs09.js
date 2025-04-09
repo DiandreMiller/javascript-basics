@@ -1,4 +1,4 @@
-//Find the bug. This function should display the full name of the user
+//Find the bug. This function should display the full name of the user.
 
 function getFullName(user) {
     return user.firstName + " " + user.lastname;
