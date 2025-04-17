@@ -37,7 +37,7 @@
 // 1 <= nums.length <= 100
 // 1 <= nums[i] <= 1000
 
-//Is there a bug here?
+//Is there a bug here? Why or why not?
 
 function transformArray(nums) {
     
