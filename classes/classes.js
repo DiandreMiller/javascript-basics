@@ -36,6 +36,7 @@
 
 
 
+
 // 6. Using Classes Instead of Object.create
 // 	•	Create a Shape class with a type property and a describe() method.
 // 	•	Create a Circle class that extends Shape.
