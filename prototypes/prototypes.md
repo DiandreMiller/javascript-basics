@@ -73,22 +73,22 @@ Built-in objects like Array, Date, and Function have their own prototypes that y
 
 Example:
 
-javascript
+```javascript
 Array.prototype.first = function() {
   return this[0];
 };
 
 const numbers = [1, 2, 3];
 console.log(numbers.first()); // 1
+```
+
 ⚡ Warning: Modifying built-in prototypes can cause maintenance problems.
 
-##Object.create and Prototypes
+## Object.create and Prototypes
 
 Object.create allows you to create a new object with a specific prototype.
 
-javascript
-Copy
-Edit
+```javascript
 const animal = {
   eats: true
 };
@@ -96,6 +96,7 @@ const animal = {
 const rabbit = Object.create(animal);
 console.log(rabbit.eats); // true
 rabbit has animal as its prototype.
+```
 
 ##Prototype vs __proto__ vs prototype
 
@@ -106,34 +107,32 @@ __proto__	Reference to the object's prototype
 [[Prototype]]	Internal link used by JavaScript
 Example:
 
-javascript
-Copy
-Edit
+```javascript
 function Car() {}
 const myCar = new Car();
 
 console.log(myCar.__proto__ === Car.prototype); // true
 console.log(Car.prototype.constructor === Car); // true
-##Changing an Object’s Prototype
+```
+
+## Changing an Object’s Prototype
 
 You can change an existing object’s prototype (not recommended for performance reasons).
 
-javascript
-Copy
-Edit
+```javascript
 const obj = {};
 const newProto = { greet() { console.log("Hello!"); } };
 
 Object.setPrototypeOf(obj, newProto);
 
 obj.greet(); // "Hello!"
-##Inheritance with Prototypes
+```
+
+## Inheritance with Prototypes
 
 You can set up inheritance manually using prototypes:
 
-javascript
-Copy
-Edit
+```javascript
 function Animal(name) {
   this.name = name;
 }
@@ -156,7 +155,9 @@ Dog.prototype.bark = function() {
 const dog = new Dog("Buddy");
 dog.move(); // "Buddy moves"
 dog.bark(); // "Buddy barks"
-###Steps:
+```
+
+### Steps:
 
 Call parent constructor inside child (Animal.call(this, name)).
 
@@ -168,9 +169,7 @@ Fix child's constructor property.
 
 Modern class syntax is syntactic sugar over prototype-based inheritance.
 
-javascript
-Copy
-Edit
+```javascript
 class Animal {
   move() {
     console.log("Moving...");
@@ -187,6 +186,7 @@ const dog = new Dog();
 dog.move(); // "Moving..."
 dog.bark(); // "Barking..."
 Under the hood, classes still use prototypes!
+```
 
 ## Summary
 
