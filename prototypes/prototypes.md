@@ -10,9 +10,7 @@ Prototypes enable efficient memory usage and dynamic inheritance in JavaScript a
 
 Every JavaScript object has a hidden internal property named [[Prototype]], which can be accessed via __proto__ (historically) or set/get using Object.getPrototypeOf and Object.setPrototypeOf.
 
-javascript
-Copy
-Edit
+```javascript
 const person = {
   greet() {
     console.log("Hello!");
@@ -22,17 +20,18 @@ const person = {
 const student = Object.create(person);
 
 student.greet(); // "Hello!"
+```
 Here, student's prototype is person, allowing student to use the greet method.
 
 ## Prototype Chain
 
 If a property or method isn't found on the object itself, JavaScript looks up the prototype chain until it finds it or reaches null.
 
-javascript
-Copy
-Edit
+```javascript
 console.log(student.hasOwnProperty('greet')); // false
 console.log('greet' in student);               // true
+```
+
 hasOwnProperty checks only own properties.
 
 in checks own + inherited properties.
@@ -41,9 +40,7 @@ in checks own + inherited properties.
 
 When creating objects via constructor functions, the methods should be defined on the constructor’s .prototype property.
 
-javascript
-Copy
-Edit
+```javascript
 function Person(name) {
   this.name = name;
 }
@@ -54,20 +51,22 @@ Person.prototype.sayHello = function() {
 
 const alice = new Person("Alice");
 alice.sayHello(); // "Hi, I'm Alice"
+```
+
 Advantages: Methods are shared across all instances, not duplicated.
 
 ## Modifying Prototypes
 
 You can dynamically add methods to prototypes even after creating instances.
 
-javascript
-Copy
-Edit
+```javascript
 Person.prototype.sayGoodbye = function() {
   console.log(`${this.name} says goodbye.`);
 };
 
 alice.sayGoodbye(); // "Alice says goodbye."
+```
+
 ## Native Prototypes
 
 Built-in objects like Array, Date, and Function have their own prototypes that you can extend (though it's usually discouraged).
@@ -75,8 +74,6 @@ Built-in objects like Array, Date, and Function have their own prototypes that y
 Example:
 
 javascript
-Copy
-Edit
 Array.prototype.first = function() {
   return this[0];
 };

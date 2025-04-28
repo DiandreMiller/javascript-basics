@@ -254,13 +254,12 @@ console.log(user.isLoggedIn); // true
 
 Helps to avoid boilerplate inside constructors.
 
-Extending Built-in Objects
+## Extending Built-in Objects
 You can create classes that inherit from built-in types like Array, Error, etc.
 
 Custom Error Example
-javascript
-Copy
-Edit
+
+```javascript
 class ValidationError extends Error {
   constructor(message) {
     super(message);
@@ -269,14 +268,13 @@ class ValidationError extends Error {
 }
 
 throw new ValidationError("Invalid input!");
+```
 ⚡ Extending built-ins makes error handling or data structures more powerful.
 
-Mixing Classes with Objects
+## Mixing Classes with Objects
 You can combine classes with object behaviors using Object.assign().
 
-javascript
-Copy
-Edit
+```javascript
 const behaviors = {
   speak() {
     console.log(`${this.name} speaks.`);
@@ -293,7 +291,10 @@ Object.assign(Cat.prototype, behaviors);
 
 const cat = new Cat("Whiskers");
 cat.speak(); // "Whiskers speaks."
+```
+
 Mixins allow sharing behavior without full inheritance.
 
-Conclusion
+## Conclusion
+
 JavaScript classes offer a modern, cleaner way to work with prototypes, making it easier to model real-world relationships between objects. By mastering classes, inheritance, static properties, and private fields, you can write more organized and scalable applications.
