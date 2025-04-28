@@ -38,24 +38,24 @@ class Person {
     this.age = age;
   }
 }
+
+```
 The constructor method initializes object properties.
 
 You use new to instantiate a class.
 
 Instantiating a Class
-javascript
-Copy
-Edit
-const alice = new Person("Alice", 30);
+```javascript
 
+const alice = new Person("Alice", 30);
 console.log(alice.name); // "Alice"
 console.log(alice.age);  // 30
-Adding Methods
+```
+
+## Adding Methods
 Methods are added inside the class without using the function keyword.
 
-javascript
-Copy
-Edit
+```javascript
 class Person {
   constructor(name, age) {
     this.name = name;
@@ -69,14 +69,13 @@ class Person {
 
 const bob = new Person("Bob", 25);
 bob.greet(); // "Hi, my name is Bob."
+```
 ✅ Methods are shared across instances via the prototype, saving memory.
 
-Class Expressions
+## Class Expressions
 Classes can also be defined as expressions and assigned to variables.
 
-javascript
-Copy
-Edit
+```javascript
 const Animal = class {
   constructor(species) {
     this.species = species;
@@ -89,14 +88,14 @@ const Animal = class {
 
 const dog = new Animal("Dog");
 dog.speak(); // "Dog makes a sound."
+```
+
 Useful for one-off classes or dynamic class creation.
 
-Getters and Setters
+## Getters and Setters
 You can define special methods to control property access.
 
-javascript
-Copy
-Edit
+```javascript
 class Rectangle {
   constructor(width, height) {
     this.width = width;
@@ -118,17 +117,19 @@ console.log(rect.area); // 50
 
 rect.dimensions = { width: 20, height: 10 };
 console.log(rect.area); // 200
+
+```
+
 get allows you to access computed properties.
 
 set allows custom logic when setting a property.
 
-Inheritance
+## Inheritance
+
 Classes can extend other classes to inherit their behavior.
 
 Subclassing
-javascript
-Copy
-Edit
+```javascript
 class Animal {
   constructor(name) {
     this.name = name;
@@ -148,16 +149,16 @@ class Dog extends Animal {
 const dog = new Dog("Buddy");
 dog.move(); // "Buddy moves."
 dog.bark(); // "Buddy barks."
+
+```
 extends keyword sets up inheritance.
 
 The subclass can define its own methods.
 
-Using super
+## Using super
 The super keyword is used to call methods from the parent class.
 
-javascript
-Copy
-Edit
+```javascript
 class Bird extends Animal {
   constructor(name, canFly) {
     super(name);
@@ -176,13 +177,13 @@ class Bird extends Animal {
 const penguin = new Bird("Penguin", false);
 penguin.move(); // "Penguin moves."
 penguin.fly();  // "Penguin can't fly."
+```
+
 Static Methods and Properties
 Static members are called on the class itself, not on instances.
 
 Static Methods
-javascript
-Copy
-Edit
+```javascript
 class MathHelper {
   static add(a, b) {
     return a + b;
@@ -190,15 +191,16 @@ class MathHelper {
 }
 
 console.log(MathHelper.add(5, 3)); // 8
-Static Properties
-javascript
-Copy
-Edit
+```
+
+## Static Properties
+```javascript
 class Company {
   static companyName = "TechCorp";
 }
 
 console.log(Company.companyName); // "TechCorp"
+```
 Static methods are often utility functions.
 
 Static properties hold constant data for the class.
@@ -206,9 +208,7 @@ Static properties hold constant data for the class.
 Private Fields and Methods
 Private members use the # prefix and are inaccessible outside the class.
 
-javascript
-Copy
-Edit
+```javascript
 class BankAccount {
   #balance = 0;
 
@@ -230,14 +230,13 @@ const account = new BankAccount("Alex");
 account.deposit(100);
 console.log(account.getBalance()); // 100
 // console.log(account.#balance); // SyntaxError
+```
 🔒 Private fields ensure true encapsulation.
 
-Class Fields
+## Class Fields
 You can declare properties directly inside the class body without the constructor.
 
-javascript
-Copy
-Edit
+```javascript
 class User {
   name = "Guest";
   isLoggedIn = false;
@@ -251,6 +250,8 @@ const user = new User();
 console.log(user.name); // "Guest"
 user.login();
 console.log(user.isLoggedIn); // true
+```
+
 Helps to avoid boilerplate inside constructors.
 
 Extending Built-in Objects
