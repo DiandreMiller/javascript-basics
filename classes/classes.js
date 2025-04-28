@@ -42,4 +42,3 @@
 // 	•	Create a Circle class that extends Shape.
 // 	•	In Circle, set type to "circle" and call describe().
 
-
