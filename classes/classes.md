@@ -244,7 +244,17 @@ Static methods are often utility functions.
 
 Static properties hold constant data for the class.
 
-Private Fields and Methods
+In this case, the createPerson method is a static method that acts as a factory for creating new instances of the Person class.
+
+### Static Methods vs Instance Methods
+	•	Static Methods: Called on the class itself, don’t need an instance.
+	•	Instance Methods: Called on an instance of the class, usually accessing instance properties (via this).
+
+### Summary:
+	•	Static methods are bound to the class, not instances.
+	•	They are useful for utility methods, factory methods, or other operations that don’t need to modify an instance’s state.
+
+## Private Fields and Methods
 Private members use the # prefix and are inaccessible outside the class.
 
 ```javascript
