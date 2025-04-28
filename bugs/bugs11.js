@@ -31,3 +31,18 @@ class Calculator {
 
 const calc = new Calculator();
 console.log(calc.add(2, 3));
+
+//Find the bug
+
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+
+    name() {
+        return this.name.toUpperCase();
+    }
+}
+
+const p = new Person('Alice');
+console.log(p.name());
