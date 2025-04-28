@@ -28,18 +28,8 @@
 
 
 
-// 5. Extending Native Prototypes (Carefully)
-// 	•	(⚡ This one stays mostly the same — still about extending built-ins!)
-// 	•	Add a method last() to Array.prototype that returns the last element.
-// 	•	Test it with different arrays.
-
-
-
-
-
-// 6. Using Classes Instead of Object.create
+// 5. Using Classes Instead of Object.create
 // 	•	Create a Shape class with a type property and a describe() method.
 // 	•	Create a Circle class that extends Shape.
 // 	•	In Circle, set type to "circle" and call describe().
-
 
