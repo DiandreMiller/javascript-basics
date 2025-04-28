@@ -179,8 +179,23 @@ penguin.move(); // "Penguin moves."
 penguin.fly();  // "Penguin can't fly."
 ```
 
-Static Methods and Properties
-Static members are called on the class itself, not on instances.
+## Static Methods and Properties
+
+Static Methods in JavaScript
+Static methods are methods that belong to the class itself, rather than to instances of the class. This means you can call them directly on the class, without creating an instance of that class.
+
+Key Points:
+Do not have access to instance data (i.e., this refers to the class itself, not an instance).
+
+Useful for utility functions that are related to the class but don’t depend on instance properties.
+
+Called directly on the class (not on instances of the class).
+
+### Syntax:
+Static methods are defined with the static keyword inside the class.
+
+## Example: Math Helper
+A common use case for static methods is to implement utility functions. For instance, a MathHelper class might have a static method for adding two numbers:
 
 Static Methods
 ```javascript
@@ -191,6 +206,30 @@ class MathHelper {
 }
 
 console.log(MathHelper.add(5, 3)); // 8
+```
+
+Here, add is a static method that doesn’t need an instance of MathHelper to be called.
+
+## Why Use Static Methods?
+	•	Utility or Helper Functions: If the method is meant to perform an operation that’s related to the class but doesn’t need to interact with instance-specific data (properties), static methods are a great choice.
+	•	Factory Methods: Static methods can also serve as factory methods, which create and return instances of a class.
+
+Example: Factory Method
+
+```javascript 
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  static createPerson(name, age) {
+    return new Person(name, age);
+  }
+}
+
+const person1 = Person.createPerson("Alice", 30);
+console.log(person1.name);  // "Alice"
 ```
 
 ## Static Properties
