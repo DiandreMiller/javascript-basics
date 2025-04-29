@@ -3,5 +3,6 @@ solutions/test.js
 solutions/objects.js
 prototypes/prototypes.md
 solutions/classes.js
-classes/hacking.md
+oop/classes/hacking.md
 bugs/bugs12.js
+oop/classes/hack.md
