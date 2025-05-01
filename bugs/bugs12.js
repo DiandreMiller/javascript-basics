@@ -1,4 +1,5 @@
 // Find the bug
+
 class Vehicle {
     move() {
         console.log('Moving');
