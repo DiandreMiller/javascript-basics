@@ -133,6 +133,7 @@
 
 
 
+
 // 13. Mixin Behavior
 // 	•	Define a speak() method in a mixin object.
 // 	•	Use Object.assign() to add it to a class Dog.
@@ -144,14 +145,17 @@
 
 
 
+
+
+
 // 14. Extending Built-In Object
 // 	•	Create a SmartArray class that extends Array.
 // 	•	Add a method first() that returns the first element.
 // 	•	Use it on an array instance.
 
+//Input: [1,2,3,4]
 // Expected Output:
 // 1
-
 
 
 
@@ -162,3 +166,4 @@
 
 // Expected Output:
 // Meow
+
