@@ -1,4 +1,4 @@
-// 🧠 Top 10-In-1 JavaScript Class Challenge (No Answers)
+// 🧠 Top 10-In-1 JavaScript Class Challenge 
 
 // PART 1:
 // Create a class called Animal with a constructor that sets the name.
