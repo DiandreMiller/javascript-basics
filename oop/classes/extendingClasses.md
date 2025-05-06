@@ -40,13 +40,38 @@ console.log('returnMiddleNumber:', returnMiddleNumber([1, 2, 3, 4, 5, 6, 7]));
 // Output: 4
 ```
 
-🧠 How It Works
+### 🧠 How It Works
 	•	Array.prototype is the shared object from which all arrays inherit.
 	•	By assigning a method to it, all arrays gain access to that method.
 	•	Inside the method, this refers to the array the method was called on.
 
 
-🔍 Verifying the Method Was Added
+
+### 📎 Using .valueOf() with Number and String Prototypes
+
+When extending primitives like Number or String, it’s important to use .valueOf() to access the actual primitive value inside the wrapper object.
+
+Example: Add an .isEven() Method to Numbers
+
+```javascript
+const evenChecker = {
+    isEven() {
+        return this.valueOf() % 2 === 0;
+    }
+};
+
+Object.assign(Number.prototype, evenChecker);
+
+console.log((10).isEven()); // true
+console.log((7).isEven());  // false
+```
+
+### 🛠 Why .valueOf()?
+	•	this inside a Number.prototype method is a boxed Number object, not a primitive.
+	•	.valueOf() returns the actual numeric value, so arithmetic checks like % 2 work correctly.
+
+
+### 🔍 Verifying the Method Was Added
 
 You can inspect the prototype to confirm your method exists:
 ```javascript
@@ -55,7 +80,7 @@ console.log(Object.getOwnPropertyNames(Array.prototype));
 
 This will include "diandre" alongside standard methods like "push", "pop", etc.
 
-💡 More Examples
+### 💡 More Examples
 
 Add a reverseWords() method to String:
 
@@ -68,7 +93,7 @@ console.log("hello world from JavaScript".reverseWords());
 // Output: "JavaScript from world hello"
 ```
 
-✅ Best Practices
+### ✅ Best Practices
 	•	Prefix your method names uniquely (e.g., diandre, customX) to avoid naming conflicts.
 	•	Consider using utility libraries (like Lodash) for shared methods in production apps.
 	•	Avoid overwriting or shadowing existing native methods.
@@ -81,4 +106,5 @@ Custom methods on built-in classes are powerful for learning and prototyping. Ju
 |--------------------------|--------------------------------------------------------------|
 | Add custom array logic   | `Object.assign(Array.prototype, { yourMethod })`             |
 | Add custom string logic  | `String.prototype.yourMethod = function() {}`                |
+| Use .valueOf() safely    | `return this.valueOf() % 2 === 0` for Numbers or Strings     |
 | Verify new methods       | `Object.getOwnPropertyNames(Class.prototype)`                |
