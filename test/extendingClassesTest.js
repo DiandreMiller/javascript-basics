@@ -1,7 +1,3 @@
-//Create a method called "removeSpaces" that remotes leading and trailing
-//spaces in string. Add it to the String.prototype
-
-
 // Create a method called "removeDuplicates" that removes duplicate elements 
 // from an array. Add it to the Array.prototype.
 
@@ -20,3 +16,10 @@
 
 // Create a method called "addToEnd" that mimics "push". 
 //Return the updated array. Add it to the Array.prototype.
+
+
+
+//Create a method called "removeSpaces" that remotes leading and trailing
+//spaces in string. Add it to the String.prototype
+
+
