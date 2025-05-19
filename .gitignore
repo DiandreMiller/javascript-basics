@@ -6,6 +6,7 @@ solutions/objects.js
 solutions/classes.js
 solutions/extendingClasses.js
 test/classesTestMe.js
+test/extendingClassesTestMe.js
 
 //prototypes:
 
