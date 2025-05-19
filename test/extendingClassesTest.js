@@ -8,8 +8,8 @@
 
 
 // Create a method called "last" that mimics "pop". 
-// It should return a new array containing the updated array's length 
-// and its last element. Add it to the Array.prototype.
+// It should return a new array containing the updated array's length,
+// its last element, and the updated array. Add it to the Array.prototype.
 
 
 
