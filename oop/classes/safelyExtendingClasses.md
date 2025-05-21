@@ -1,6 +1,6 @@
 # Safely Extending JavaScript Classes Using Inheritance
 
-While JavaScript allows direct modification of built-in prototypes, it's safer and more maintainable to **extend built-in classes through inheritance**. This avoids the risks of polluting global prototypes or causing conflicts in shared codebases.
+In the previous lesson, we discussed how you can directly modify built-in prototypes. While JavaScript allows this, it's safer and more maintainable to **extend built-in classes through inheritance**. This avoids the risks of polluting global prototypes or causing conflicts in shared codebases.
 
 ---
 
