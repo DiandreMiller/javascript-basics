@@ -18,6 +18,10 @@
 // Instruction:
 // Add a static method to a utility class that takes a string and converts it to snake_case.
 
+// ex: 
+// console.log(StringUtils.toSnakeCase("Hello World"));          
+// Output: "hello_world"
+
 // ⸻
 
 // 4. Create an isOdd() method in a number wrapper class
