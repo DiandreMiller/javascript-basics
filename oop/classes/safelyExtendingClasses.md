@@ -39,7 +39,7 @@ If you would like to use this in a function, you can write it this way:
 
 function returnMiddleNumber (arr) {
     const customArray = new CustomArray(...arr);
-    return arr.middle();
+    return customArray.middle();
 }
 // Output: 4
 ```
