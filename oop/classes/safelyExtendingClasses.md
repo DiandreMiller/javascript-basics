@@ -42,9 +42,26 @@ console.log('returnMiddleNumber:', arr.diandre());
 
 ## 🧮 Safe Extension for Numbers
 
-Primitives like Number can’t be subclassed directly. Instead, create a utility wrapper:
+### ❓ Why Can’t You Extend Primitives Directly?
+
+Primitives in JavaScript — such as:
+	•	Number (e.g. 42)
+	•	String (e.g. "hello")
+	•	Boolean (e.g. true)
+
+— are not objects. They are immutable, atomic values and do not have a prototype chain you can safely extend.
+
+JavaScript temporarily “boxes” these values in wrapper objects (like new Number(42)) when you access methods such as .toString(). However, you cannot subclass the primitive type itself or reliably add custom methods to its prototype.
+
+⚠️ For example, extending Number using class MyNumber extends Number works on the object wrapper, but not on actual primitive values like 42.
+
+⸻
+
+### ✅ Safe Alternative: Use a Utility Wrapper
 
 ### Example: Add .isEven() with a Custom Class
+
+Instead of trying to extend a primitive, create a utility class:
 
 ```javascript
 class SafeNumber {
