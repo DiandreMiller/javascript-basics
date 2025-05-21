@@ -90,6 +90,31 @@ const myNum = new SafeNumber(10);
 console.log(myNum.isEven()); // true
 ```
 
+How would this look like in a function:
+
+```javascript
+
+class SafeNumber {
+    constructor(value) {
+        this.value = value;
+    }
+
+    isEven() {
+        return this.value % 2 === 0;
+    }
+}
+
+// Function that takes a number and returns whether it's even
+const checkIfEven = (num) => {
+    const safe = new SafeNumber(num);
+    return safe.isEven();
+};
+
+// Test it
+console.log(checkIfEven(10)); // true
+console.log(checkIfEven(7));  // false
+```
+
 ## 🧠 How It Works
 	•	SafeNumber is a wrapper around the primitive number.
 	•	isEven() is scoped only to SafeNumber instances.
