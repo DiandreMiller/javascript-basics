@@ -33,6 +33,17 @@ console.log('returnMiddleNumber:', arr.diandre());
 // Output: 4
 ```
 
+If you would like to use this in a function, you can write it this way:
+
+```javascript
+
+function returnMiddleNumber (arr) {
+    const customArray = new CustomArray(...arr);
+    return arr.middle();
+}
+// Output: 4
+```
+
 ## 🧠 How It Works
 	•	CustomArray inherits all standard Array behavior.
 	•	The .diandre() method is scoped only to CustomArray instances.
