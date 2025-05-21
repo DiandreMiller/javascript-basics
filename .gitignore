@@ -1,10 +1,9 @@
 //solutions:
 
-solutions/arrays.js
-solutions/test.js
-solutions/objects.js
-solutions/classes.js
-solutions/extendingClasses.js
+solutions/**
+
+//test:
+
 test/classesTestMe.js
 test/extendingClassesTestMe.js
 
