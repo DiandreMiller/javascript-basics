@@ -12,4 +12,5 @@ class Timer {
   }
   
   const timer = new Timer();
-  timer.start(); // Throws TypeError: Cannot read private member #seconds from an object whose class did not declare it
+  timer.start(); // Throws TypeError: Cannot read private member 
+  // #seconds from an object whose class did not declare it
