@@ -52,7 +52,7 @@
 
 // 5. Create a BankUtils class with static methods
 // Write:
-// 	•	formatCurrency(amount) – returns a string like $500.00.
+// 	•	formatCurrency(amount) – returns a string like $500.00
 // 	•	topAccounts(accounts, n) – returns the top n accounts with the highest balance.
 
 // ⸻
