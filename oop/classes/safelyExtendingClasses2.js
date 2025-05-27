@@ -95,7 +95,7 @@
 // Modify sortByBalance() so that you can do:
 
 
-// bank.accounts.sortByBalance().filter(acc => acc.getBalance() > 1000);
+// bank.accounts.sortByBalance().filter(acc => acc.getBalance() > 1000)
 
 // ⸻
 
