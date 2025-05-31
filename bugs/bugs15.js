@@ -1,4 +1,4 @@
-//Find the bugs
+//Find the bugs.
 
 // 1.
 
