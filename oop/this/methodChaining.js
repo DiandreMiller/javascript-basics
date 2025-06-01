@@ -17,3 +17,13 @@
 
 // Track numerical stats with .add(number), .subtract(number), .multiply(number), 
 // and a .getTotal() (note: getTotal() should not be chainable).
+
+// 💵 5. Extend the BankAccount class
+
+// Add .setOwner(name) and .transferTo(otherAccount, amount) methods to your 
+// BankAccount class with chaining.
+
+// 📐 6. Create a Rectangle class
+
+// Allow chaining for .setWidth(w), .setHeight(h), .scale(factor), and .printArea().
+
