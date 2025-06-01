@@ -7,3 +7,8 @@
 
 // This class should allow chaining of string manipulations like .append(str), 
 // .prepend(str), .toUpperCase(), and .print().
+
+// ⏰ 3. Make a Timer class
+
+// Build a class with .start(), .pause(), .reset(), and .status() methods 
+// that support chaining (you can simulate time using simple logs).
