@@ -12,7 +12,7 @@ class CustomArray extends Array {
 const nums = new CustomArray(10, 20, 30, 40, 50);
 console.log(nums.getMiddle()); 
 
-//2. 
+// 2. 
 
 class SafeNumber {
   constructor(value) {
