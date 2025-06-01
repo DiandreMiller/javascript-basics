@@ -12,3 +12,8 @@
 
 // Build a class with .start(), .pause(), .reset(), and .status() methods 
 // that support chaining (you can simulate time using simple logs).
+
+// 📊 4. Build a StatsTracker
+
+// Track numerical stats with .add(number), .subtract(number), .multiply(number), 
+// and a .getTotal() (note: getTotal() should not be chainable).
