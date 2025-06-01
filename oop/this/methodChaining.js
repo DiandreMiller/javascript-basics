@@ -39,3 +39,9 @@
 
 // Create a Calculator class with .add(), .subtract(), .multiply(), .divide() 
 // and a .value() method that returns the result (non-chainable).
+
+
+// 🎶 9. MusicPlayer Simulation
+
+// Build a class with .play(song), .pause(), .next(), .stop() methods to 
+// simulate audio controls (chainable).
