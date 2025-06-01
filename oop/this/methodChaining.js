@@ -27,3 +27,21 @@
 
 // Allow chaining for .setWidth(w), .setHeight(h), .scale(factor), and .printArea().
 
+
+// 🎨 7. Style builder class for HTML elements
+
+// Simulate a class .setColor(), .setFontSize(), .setBackground(), .apply() 
+// to “apply styles” (logged as output).
+
+
+
+// 🔄 8. Chainable Calculator
+
+// Create a Calculator class with .add(), .subtract(), .multiply(), .divide() 
+// and a .value() method that returns the result (non-chainable).
+
+
+// 🎶 9. MusicPlayer Simulation
+
+// Build a class with .play(song), .pause(), .next(), .stop() methods to 
+// simulate audio controls (chainable).
