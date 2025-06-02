@@ -49,7 +49,6 @@ const calc = new BuggyCalculator();
 calc.add(10).subtract(5).print();
 
 // 3.
-
 class BuggyBank {
   constructor(name, balance = 0) {
     this.name = name;
