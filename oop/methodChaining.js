@@ -45,3 +45,8 @@
 
 // Build a class with .play(song), .pause(), .next(), .stop() methods to 
 // simulate audio controls (chainable).
+
+// 10. 🔄 10. Implement a ChainLogger
+
+// Create a logger class that supports method chaining with .log(message), .warn(message), 
+// .error(message) and ends with .flush() that prints all messages at once.
