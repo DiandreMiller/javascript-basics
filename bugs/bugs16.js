@@ -43,7 +43,7 @@ class BuggyCalculator {
     console.log(`Total: ${this.total}`);
     return this;
   }
-}
+};
 
 const calc = new BuggyCalculator();
 calc.add(10).subtract(5).print();
