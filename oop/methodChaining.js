@@ -1,3 +1,5 @@
+//run npm install chalk 
+
 // 🔧 1. Create a TodoList class with method chaining
 
 // Build a class to manage a todo list with methods like .addTask(task), 
