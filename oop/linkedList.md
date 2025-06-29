@@ -1,4 +1,4 @@
-📚 Introduction to Linked Lists in JavaScript
+# 📚 Introduction to Linked Lists in JavaScript
 
 A linked list is a fundamental data structure used to store collections of data in a linear order, similar to arrays. However, unlike arrays, linked lists do not store elements in contiguous memory locations.
 
@@ -8,7 +8,7 @@ Instead, each element (called a node) contains:
 
 ⸻
 
-🧱 What is a Node?
+## 🧱 What is a Node?
 
 A node is the basic building block of a linked list.
 
@@ -21,7 +21,7 @@ class Node {
 }
 ```
 
-🏗️ Structure of a Linked List
+## 🏗️ Structure of a Linked List
 
 A LinkedList class typically manages the entire list and keeps track of the head, which is the first node in the list.
 
@@ -33,7 +33,7 @@ class LinkedList {
 }
 ```
 
-➕ Common Linked List Operations
+## ➕ Common Linked List Operations
 
 Here are some of the most common operations performed on linked lists:
 
@@ -46,7 +46,7 @@ Here are some of the most common operations performed on linked lists:
 | Search    | Find a node with a specific value |
 
 
-✅ Example: Adding Elements to a Linked List
+## ✅ Example: Adding Elements to a Linked List
 
 ```javascript
 class LinkedList {
@@ -87,21 +87,21 @@ list.print();
 // Output: 10 -> 20 -> 30 -> null
 ```
 
-✨ Benefits of Linked Lists
+## ✨ Benefits of Linked Lists
 	•	✅ Dynamic size (no need to predefine length)
 	•	✅ Fast insertions and deletions at the start or middle
 	•	✅ Efficient memory usage for frequent add/remove operations
 
 ⸻
 
-⚠️ Things to Keep in Mind
+## ⚠️ Things to Keep in Mind
 	•	❌ Access time is slower compared to arrays (no direct index access)
 	•	❌ Requires careful pointer management (to avoid breaking the list)
 	•	✅ Null checks are critical to avoid runtime errors when traversing
 
 
 
-📎 Summary
+## 📎 Summary
 
 A linked list is a versatile and powerful data structure for ordered data, especially useful when your application involves frequent insertions and deletions.
 
