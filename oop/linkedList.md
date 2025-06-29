@@ -101,9 +101,34 @@ list.print();
 
 
 
+## ✅ Situations Where Linked Lists Are Better Than Arrays (Markdown Table)
+
+| Scenario | Why Linked Lists Help |
+|---------|------------------------|
+| Frequent Insertions at the Start | In an array, inserting at index `0` shifts all elements (O(n)), but in a linked list, you can **prepend** in constant time (O(1)). |
+| Frequent Deletions from the Start or Middle | Arrays require shifting elements after deletion. Linked lists can **remove nodes** by simply changing pointers (O(1) if you have a reference). |
+| Unknown or Dynamic Size | If you don't know the total number of elements beforehand, linked lists grow **without resizing overhead** (no reallocation like with arrays). |
+| Implementing Queues and Stacks | Linked lists make **Queue (FIFO)** and **Stack (LIFO)** implementations efficient, especially for **enqueue, dequeue, push, pop** operations. |
+| Real-time Streaming Data | When data keeps arriving in chunks (like from a network stream), linked lists help by **efficiently appending new data as it comes** without needing to resize. |
+| Memory-Constrained Systems (Low-Level Cases) | Though less common in JavaScript, in low-level systems where **contiguous memory for arrays is hard to allocate**, linked lists excel because **nodes can live anywhere in memory**. |
+
+
+
+✅ Quick Example Comparison: Arrays vs Linked Lists (Markdown Table)
+
+| Operation | Array (JavaScript) | Linked List |
+|---|---|---|
+| Insert at start | Slow (O(n)) | Fast (O(1)) |
+| Delete at start | Slow (O(n)) | Fast (O(1)) |
+| Access by index | Fast (O(1)) | Slow (O(n)) |
+| Dynamic growth | Can require resizing | Grows naturally |
+
+
 ## 📎 Summary
 
-A linked list is a versatile and powerful data structure for ordered data, especially useful when your application involves frequent insertions and deletions.
+A linked list is a versatile and powerful data structure for storing ordered data.  
 
-Understanding how to build and manipulate linked lists is a key foundational skill in JavaScript and computer science in general.
+Unlike arrays, linked lists provide **efficient insertions and deletions**, especially at the start or middle of the list. They grow dynamically and don’t require resizing, making them useful in situations where **data size changes frequently** or **constant-time operations** on the head are needed.
+
+Understanding how to build, traverse, and manipulate linked lists is a key foundational skill in both **JavaScript** and **computer science in general**, especially for solving coding interview problems and designing efficient algorithms.
 
