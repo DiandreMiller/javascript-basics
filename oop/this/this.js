@@ -70,6 +70,8 @@
 // 	•	One using an arrow function that logs this.
 // 	•	Click the button and observe how this differs in each.
 
+// Do this question in oop/this/this.html
+
 
 
 // 10. forEach and this
