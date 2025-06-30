@@ -20,4 +20,7 @@ oop/classes/hack.md
 //bugs:
 bugs/bugs18.js
 
-//this:
+//linkedList:
+
+oop/linkedList.md
+oop/linkedList.js
