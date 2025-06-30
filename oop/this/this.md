@@ -118,6 +118,26 @@ class Timer {
 }
 ```
 
+### Error Message:
+
+TypeError: Cannot read private member '#count' from an object whose class did not declare it
+
+### Why this is an error:
+
+	•	Inside setInterval(function() { ... }), the this keyword no longer refers to the Timer instance.
+	•	It now refers to the global object (window in browsers or global in Node.js), or undefined in strict mode.
+	•	The error specifically gets worse because you’re trying to access a private field (#count) on the wrong this.
+	•	JavaScript doesn’t allow private fields to be accessed from outside the class that declared them.
+
+
+### ✅ The two causes:
+
+| Cause                             | Why                                                      |
+|-----------------------------------|----------------------------------------------------------|
+| Regular function inside `setInterval` | `this` defaults to global object or `undefined` (depending on strict mode) |
+| Trying to access private field `#count` | Private fields can only be accessed when `this` refers to the correct class instance |
+
+
 ### ✅ Solution 1: Use Arrow Function
 
 ```javascript
@@ -132,7 +152,7 @@ class Timer {
 }
 ```
 
-✅ Solution 2: Use .bind(this)
+### ✅ Solution 2: Use .bind(this)
 
 
 ```javascript
