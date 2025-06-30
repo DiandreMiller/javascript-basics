@@ -1,22 +1,6 @@
 // Find the bug
 
-//1.
-
-class BuggyGreeter {
-    constructor(name) {
-      this.name = name;
-    }
-  
-    greet = () => {
-      console.log(`Hello, ${this.name}`);
-    }
-  }
-  
-  const greeter = new BuggyGreeter('Alex');
-  const sayHi = greeter.greet;
-  sayHi(); 
-
-  //2. 
+//1. 
 
 class BuggyTimer {
     constructor() {
@@ -35,7 +19,7 @@ class BuggyTimer {
   timer.start(); 
 
   
-  //3.
+//2.
 
 class BuggyButton {
     constructor(label) {
@@ -48,4 +32,27 @@ class BuggyButton {
   }
   
   const button = new BuggyButton('Submit');
-  document.addEventListener('click', button.handleClick); 
+  
+
+  const callback = button.handleClick;
+  callback(); 
+
+
+  //3,
+
+  class BuggyReminder {
+    constructor(message) {
+      this.message = message;
+    }
+  
+    get remind() {
+      console.log(`Reminder: ${this.message}`);
+    }
+  
+    start() {
+      setTimeout(this.remind, 1000); 
+    }
+  }
+  
+  const reminder = new BuggyReminder('Time to stretch!');
+  reminder.start();
