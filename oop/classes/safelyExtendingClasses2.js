@@ -109,54 +109,141 @@
 // ⸻
 
 
-// Part 5: Static Utility Functions
+// Part 5: Static Utility Functions – BankUtils
 
-// 5. Create a BankUtils class with static methods
-// Write:
-// 	•	formatCurrency(amount) – returns a string like $500.00
-// 	•	topAccounts(accounts, n) – returns the top n accounts with the highest balance.
+// ✅ Task:
+
+// Create a BankUtils class with static helper methods.
+
+// ✅ Requirements:
+// 	•	Class name: BankUtils
+// 	•	Static methods:
+// 	•	formatCurrency(amount) → Returns a formatted string like $500.00
+// 	•	topAccounts(accounts, n) → Returns an array of the top n accounts (by highest balance), sorted descending.
+
+// ✅ Example:
+
+// console.log(BankUtils.formatCurrency(1500)); // Output: "$1,500.00"
+
+// const topAccounts = BankUtils.topAccounts(bank.accounts, 2);
+// topAccounts.forEach(acc => console.log(acc.accountHolder));
+
+// // ⸻
+
+// Part 6: Encapsulation Explanation (Short Written Answer)
+
+// ✅ Task:
+
+// Answer this question in 2–4 sentences:
+
+// Why is using #balance (private field) better than making balance a public property in the BankAccount class?
+
+// ✅ Expected Answer:
+
+// You should explain data protection and encapsulation. Example points:
+// 	•	Prevents external code from directly changing balance.
+// 	•	Ensures balance only changes via controlled methods (deposit, withdraw).
+
 
 // ⸻
 
-// Part 6: Encapsulation Practice
+// Part 7: Using the Bank Class (Simulation)
 
-// 6. Why is using #balance instead of a public property beneficial in the BankAccount class?
-// Write a short explanation about encapsulation and data protection.
+// ✅ Task:
+
+// Simulate real banking actions.
+
+// ✅ Instructions:
+// 	•	Create a Bank instance.
+// 	•	Add at least 4 accounts, including:
+// 	•	At least 1 SavingsAccount
+// 	•	Perform the following:
+// 	•	Apply interest to the SavingsAccount.
+// 	•	Deposit money into at least one regular BankAccount.
+// 	•	Use getTotalAssets() to calculate total assets.
+
+// ✅ Example Flow:
+
+// const bank = new Bank('MyBank');
+// bank.addAccount(new BankAccount('Alice', 500));
+// bank.addAccount(new SavingsAccount('Bob', 1000, 0.05));
+// bank.addAccount(new BankAccount('Charlie', 300));
+// bank.addAccount(new BankAccount('Dana', 1200));
+
+// bank.findAccount('Bob').applyInterest();
+// bank.findAccount('Alice').deposit(200);
+
+// console.log(bank.getTotalAssets()); // Should reflect all balances
+
 
 // ⸻
 
-// Part 7: Using the Bank Class
+// Part 8: Filter and Format Top Accounts
 
-// 7. Instantiate a bank and add at least 4 accounts
-// Do the following:
-// 	•	Add at least one SavingsAccount
-// 	•	Apply interest to a savings account
-// 	•	Deposit money into a regular account
-// 	•	Use getTotalAssets() to check total funds
+// ✅ Task:
 
-// ⸻
+// Find and display the top 3 accounts by balance, formatted as currency.
 
-// Part 8: Filter and Format
+// ✅ Instructions:
+// 	•	Use BankUtils.topAccounts() on your bank’s accounts.
+// 	•	For each top account, print:
+// 	•	Account holder name
+// 	•	Formatted balance (using BankUtils.formatCurrency())
 
-// 8. Use BankUtils.topAccounts to find and print the top 3 accounts
-// Make sure to use BankUtils.formatCurrency() to print the balances nicely.
+// ✅ Example Output:
 
-// ⸻
-
-// Part 9: Sorting Practice
-
-// 9. Sort all accounts in ascending order by balance using sortByBalance()
-// Log each account’s name and balance.
+// Top 3 Accounts:
+// Dana - $1,200.00
+// Bob - $1,050.00
+// Alice - $700.00
 
 // ⸻
 
-// Part 10: Bonus – Method Chaining (Advanced)
+// Part 9: Sort All Accounts by Balance (Ascending)
 
-// 10. Make BankAccountArray support method chaining
-// Modify sortByBalance() so that you can do:
+// ✅ Task:
 
+// Sort all accounts by balance (low to high).
 
-// bank.accounts.sortByBalance().filter(acc => acc.getBalance() > 1000);
+// ✅ Instructions:
+// 	•	Use the sortByBalance() method (without desc flag or with false).
+// 	•	Log each account’s name and balance.
+
+// ✅ Example Output:
+
+// Account Balances (Low to High):
+// Charlie - $300.00
+// Alice - $700.00
+// Bob - $1,050.00
+// Dana - $1,200.00
 
 // ⸻
+
+// Part 10: Bonus – Method Chaining Support (Advanced)
+
+// ✅ Task:
+
+// Enable method chaining on the BankAccountArray class.
+
+// ✅ Instructions:
+// 	•	Modify your sortByBalance() so it returns this instead of a new array.
+// 	•	This will allow code like:
+
+//     bank.accounts
+//     .sortByBalance()
+//     .filter(acc => acc.getBalance() > 1000)
+//     .forEach(acc => console.log(acc.accountHolder));
+
+//     ✅ Expected Behavior:
+
+// Chaining works. After sorting, .filter() and .forEach() run as expected.
+
+// ⸻
+
+
+// ✅ ✅ ✅ FINAL NOTES:
+// 	•	Every class must be written with clean syntax and correct ES6+ JavaScript.
+// 	•	Methods and parameters must exactly match the names and behaviors described here.
+// 	•	Test your code thoroughly for each part before moving to the next.
+
 
