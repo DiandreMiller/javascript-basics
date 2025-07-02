@@ -32,10 +32,25 @@
 
 // Part 2: Inheritance with SavingsAccount
 
-// 2. Create a SavingsAccount class that extends BankAccount
-// Add:
-// 	•	A constructor that takes interestRate in addition to the normal properties.
-// 	•	A method applyInterest() that calculates interest on the current balance and deposits it.
+// ✅ Task:
+
+// Create a SavingsAccount class that inherits from BankAccount and adds interest functionality.
+
+// ✅ Requirements:
+// 	•	Class name: SavingsAccount
+// 	•	Inherits from: BankAccount
+// 	•	Constructor parameters:
+// 	•	accountHolder (string)
+// 	•	initialBalance (number)
+// 	•	interestRate (number, as a decimal like 0.05 for 5%)
+// 	•	Additional Method:
+// 	•	applyInterest() → Calculates interest (balance * interestRate) and deposits it.
+
+// ✅ Example:
+
+// const savings = new SavingsAccount('Bob', 1000, 0.05);
+// savings.applyInterest();
+// console.log(savings.getBalance()); // Output: 1050
 
 // ⸻
 
