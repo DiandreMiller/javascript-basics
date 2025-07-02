@@ -147,14 +147,34 @@
 
 // ⸻
 
-// Part 7: Using the Bank Class
+// Part 7: Using the Bank Class (Simulation)
 
-// 7. Instantiate a bank and add at least 4 accounts
-// Do the following:
-// 	•	Add at least one SavingsAccount
-// 	•	Apply interest to a savings account
-// 	•	Deposit money into a regular account
-// 	•	Use getTotalAssets() to check total funds
+// ✅ Task:
+
+// Simulate real banking actions.
+
+// ✅ Instructions:
+// 	•	Create a Bank instance.
+// 	•	Add at least 4 accounts, including:
+// 	•	At least 1 SavingsAccount
+// 	•	Perform the following:
+// 	•	Apply interest to the SavingsAccount.
+// 	•	Deposit money into at least one regular BankAccount.
+// 	•	Use getTotalAssets() to calculate total assets.
+
+// ✅ Example Flow:
+
+// const bank = new Bank('MyBank');
+// bank.addAccount(new BankAccount('Alice', 500));
+// bank.addAccount(new SavingsAccount('Bob', 1000, 0.05));
+// bank.addAccount(new BankAccount('Charlie', 300));
+// bank.addAccount(new BankAccount('Dana', 1200));
+
+// bank.findAccount('Bob').applyInterest();
+// bank.findAccount('Alice').deposit(200);
+
+// console.log(bank.getTotalAssets()); // Should reflect all balances
+
 
 // ⸻
 
