@@ -240,3 +240,10 @@
 
 // ⸻
 
+
+// ✅ ✅ ✅ FINAL NOTES:
+// 	•	Every class must be written with clean syntax and correct ES6+ JavaScript.
+// 	•	Methods and parameters must exactly match the names and behaviors described here.
+// 	•	Test your code thoroughly for each part before moving to the next.
+
+
