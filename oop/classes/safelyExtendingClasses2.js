@@ -55,25 +55,56 @@
 // ⸻
 
 
-// Part 3: Extend Native Array Class
+// Part 3: Custom BankAccountArray Class (Extending Array)
 
-// 3. Create a custom class BankAccountArray that extends the built-in Array class
-// Add the following methods:
-// 	•	findByName(name): returns the account with the given accountHolder name.
-// 	•	totalBalance(): returns the total of all balances.
-// 	•	sortByBalance(desc): returns a new array sorted by balance ascending or descending.
+// ✅ Task:
+
+// Create a BankAccountArray class that extends the built-in Array class, adding custom methods for managing accounts.
+
+// ✅ Requirements:
+// 	•	Class name: BankAccountArray
+// 	•	Inherits from: JavaScript Array
+// 	•	Methods:
+// 	•	findByName(name) → Returns the account (object) whose accountHolder matches the string name.
+// 	•	totalBalance() → Returns the sum of all account balances (number).
+// 	•	sortByBalance(desc) → Returns a new array sorted by balance:
+// 	•	If desc is true, sort descending (highest first).
+// 	•	If false or omitted, sort ascending (lowest first).
+
+// ✅ Example:
+// const accounts = new BankAccountArray();
+// accounts.push(new BankAccount('Alice', 500), new BankAccount('Bob', 800));
+
+// console.log(accounts.findByName('Bob')); // Output: Bob's BankAccount object
+// console.log(accounts.totalBalance());    // Output: 1300
+// console.log(accounts.sortByBalance(true)); // Output: Array sorted high-to-low
+
 
 // ⸻
 
-// Part 4: Bank as a Composition Class
+// Part 4: Bank Class (Composition)
 
-// 4. Create a Bank class that contains a BankAccountArray
-// Include:
-// 	•	A constructor that sets the bank name and initializes the account array.
+// ✅ Task:
+
+// Create a Bank class that contains a BankAccountArray as a property.
+
+// ✅ Requirements:
+// 	•	Class name: Bank
+// 	•	Constructor parameters:
+// 	•	name (string)
+// 	•	Property:
+// 	•	accounts → Instance of BankAccountArray
 // 	•	Methods:
-// 	•	addAccount(account)
-// 	•	findAccount(name)
-// 	•	getTotalAssets()
+// 	•	addAccount(account) → Adds an account (instance of BankAccount or SavingsAccount)
+// 	•	findAccount(name) → Finds an account by account holder name
+// 	•	getTotalAssets() → Returns total assets (sum of all balances)
+
+// ✅ Example:
+
+// const bank = new Bank('MyBank');
+// bank.addAccount(new BankAccount('Alice', 500));
+// console.log(bank.getTotalAssets()); // Output: 500
+
 
 // ⸻
 
