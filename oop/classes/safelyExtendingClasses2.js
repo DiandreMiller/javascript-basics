@@ -109,14 +109,26 @@
 // ⸻
 
 
-// Part 5: Static Utility Functions
+// Part 5: Static Utility Functions – BankUtils
 
-// 5. Create a BankUtils class with static methods
-// Write:
-// 	•	formatCurrency(amount) – returns a string like $500.00
-// 	•	topAccounts(accounts, n) – returns the top n accounts with the highest balance.
+// ✅ Task:
 
-// ⸻
+// Create a BankUtils class with static helper methods.
+
+// ✅ Requirements:
+// 	•	Class name: BankUtils
+// 	•	Static methods:
+// 	•	formatCurrency(amount) → Returns a formatted string like $500.00
+// 	•	topAccounts(accounts, n) → Returns an array of the top n accounts (by highest balance), sorted descending.
+
+// ✅ Example:
+
+// console.log(BankUtils.formatCurrency(1500)); // Output: "$1,500.00"
+
+// const topAccounts = BankUtils.topAccounts(bank.accounts, 2);
+// topAccounts.forEach(acc => console.log(acc.accountHolder));
+
+// // ⸻
 
 // Part 6: Encapsulation Practice
 
