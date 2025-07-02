@@ -130,10 +130,20 @@
 
 // // ⸻
 
-// Part 6: Encapsulation Practice
+// Part 6: Encapsulation Explanation (Short Written Answer)
 
-// 6. Why is using #balance instead of a public property beneficial in the BankAccount class?
-// Write a short explanation about encapsulation and data protection.
+// ✅ Task:
+
+// Answer this question in 2–4 sentences:
+
+// Why is using #balance (private field) better than making balance a public property in the BankAccount class?
+
+// ✅ Expected Answer:
+
+// You should explain data protection and encapsulation. Example points:
+// 	•	Prevents external code from directly changing balance.
+// 	•	Ensures balance only changes via controlled methods (deposit, withdraw).
+
 
 // ⸻
 
