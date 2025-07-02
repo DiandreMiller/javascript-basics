@@ -82,15 +82,29 @@
 
 // ⸻
 
-// Part 4: Bank as a Composition Class
+// Part 4: Bank Class (Composition)
 
-// 4. Create a Bank class that contains a BankAccountArray
-// Include:
-// 	•	A constructor that sets the bank name and initializes the account array.
+// ✅ Task:
+
+// Create a Bank class that contains a BankAccountArray as a property.
+
+// ✅ Requirements:
+// 	•	Class name: Bank
+// 	•	Constructor parameters:
+// 	•	name (string)
+// 	•	Property:
+// 	•	accounts → Instance of BankAccountArray
 // 	•	Methods:
-// 	•	addAccount(account)
-// 	•	findAccount(name)
-// 	•	getTotalAssets()
+// 	•	addAccount(account) → Adds an account (instance of BankAccount or SavingsAccount)
+// 	•	findAccount(name) → Finds an account by account holder name
+// 	•	getTotalAssets() → Returns total assets (sum of all balances)
+
+// ✅ Example:
+
+// const bank = new Bank('MyBank');
+// bank.addAccount(new BankAccount('Alice', 500));
+// console.log(bank.getTotalAssets()); // Output: 500
+
 
 // ⸻
 
