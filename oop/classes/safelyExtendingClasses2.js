@@ -219,13 +219,24 @@
 
 // ⸻
 
-// Part 10: Bonus – Method Chaining (Advanced)
+// Part 10: Bonus – Method Chaining Support (Advanced)
 
-// 10. Make BankAccountArray support method chaining
-// Modify sortByBalance() so that you can do:
+// ✅ Task:
 
+// Enable method chaining on the BankAccountArray class.
 
-// bank.accounts.sortByBalance().filter(acc => acc.getBalance() > 1000);
+// ✅ Instructions:
+// 	•	Modify your sortByBalance() so it returns this instead of a new array.
+// 	•	This will allow code like:
+
+//     bank.accounts
+//     .sortByBalance()
+//     .filter(acc => acc.getBalance() > 1000)
+//     .forEach(acc => console.log(acc.accountHolder));
+
+//     ✅ Expected Behavior:
+
+// Chaining works. After sorting, .filter() and .forEach() run as expected.
 
 // ⸻
 
