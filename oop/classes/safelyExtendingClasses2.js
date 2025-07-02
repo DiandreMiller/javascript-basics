@@ -1,17 +1,32 @@
 // 💡 10-Part JavaScript Banking System Challenge
 
-// Part 1: Basic Account Class
+// Part 1: Basic Bank Account Class
 
-// 1. Create a BankAccount class
-// Write a class BankAccount with the following:
-// 	•	A constructor that accepts accountHolder and initialBalance.
-// 	•	A private #balance field.
-// 	•	A private #transactionHistory array.
+// ✅ Task:
+
+// Create a BankAccount class with data encapsulation (using private fields).
+
+// ✅ Requirements:
+// 	•	Class name: BankAccount
+// 	•	Private fields:
+// 	•	#balance (number)
+// 	•	#transactionHistory (array)
+// 	•	Constructor parameters:
+// 	•	accountHolder (string)
+// 	•	initialBalance (number)
 // 	•	Methods:
-// 	•	deposit(amount)
-// 	•	withdraw(amount)
-// 	•	getBalance()
-// 	•	getHistory()
+// 	•	deposit(amount) → Adds to balance and records the transaction
+// 	•	withdraw(amount) → Subtracts from balance (if sufficient funds) and records the transaction
+// 	•	getBalance() → Returns current balance (number)
+// 	•	getHistory() → Returns array of transaction strings
+
+// ✅ Example:
+
+// const acc = new BankAccount('Alice', 500);
+// acc.deposit(200);
+// acc.withdraw(100);
+// console.log(acc.getBalance()); // Output: 600
+// console.log(acc.getHistory()); // Output: ['Deposited: 200', 'Withdrew: 100']
 
 // ⸻
 
