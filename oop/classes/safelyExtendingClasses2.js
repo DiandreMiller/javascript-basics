@@ -178,10 +178,24 @@
 
 // ⸻
 
-// Part 8: Filter and Format
+// Part 8: Filter and Format Top Accounts
 
-// 8. Use BankUtils.topAccounts to find and print the top 3 accounts
-// Make sure to use BankUtils.formatCurrency() to print the balances nicely.
+// ✅ Task:
+
+// Find and display the top 3 accounts by balance, formatted as currency.
+
+// ✅ Instructions:
+// 	•	Use BankUtils.topAccounts() on your bank’s accounts.
+// 	•	For each top account, print:
+// 	•	Account holder name
+// 	•	Formatted balance (using BankUtils.formatCurrency())
+
+// ✅ Example Output:
+
+// Top 3 Accounts:
+// Dana - $1,200.00
+// Bob - $1,050.00
+// Alice - $700.00
 
 // ⸻
 
