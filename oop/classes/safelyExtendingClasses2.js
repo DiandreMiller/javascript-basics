@@ -199,10 +199,23 @@
 
 // ⸻
 
-// Part 9: Sorting Practice
+// Part 9: Sort All Accounts by Balance (Ascending)
 
-// 9. Sort all accounts in ascending order by balance using sortByBalance()
-// Log each account’s name and balance.
+// ✅ Task:
+
+// Sort all accounts by balance (low to high).
+
+// ✅ Instructions:
+// 	•	Use the sortByBalance() method (without desc flag or with false).
+// 	•	Log each account’s name and balance.
+
+// ✅ Example Output:
+
+// Account Balances (Low to High):
+// Charlie - $300.00
+// Alice - $700.00
+// Bob - $1,050.00
+// Dana - $1,200.00
 
 // ⸻
 
