@@ -13,3 +13,9 @@ function appendToNumber(num) {
     return num;
 }
 console.log(appendToNumber(7)); // Expected: [7, 42]
+
+// 3.
+function negate(bool) {
+    return bool.not;
+}
+console.log(negate(true)); // Expected: false
