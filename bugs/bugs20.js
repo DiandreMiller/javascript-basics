@@ -8,3 +8,14 @@ function capitalize(str) {
 console.log(capitalize('hello')); // Expected: 'Hello'
 
 // 2.
+function appendToNumber(num) {
+    num.push(42);
+    return num;
+}
+console.log(appendToNumber(7)); // Expected: [7, 42]
+
+// 3.
+function negate(bool) {
+    return bool.not;
+}
+console.log(negate(true)); // Expected: false
