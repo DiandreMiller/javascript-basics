@@ -164,5 +164,63 @@ function parseQuery(str) {
     });
     return obj;
 }
-console.log(parseQuery('a=1&b=2'));  
-// Expected: {a: '1', b: '2'}
+console.log(parseQuery('a=1&b=2'));  // Expected: {a: '1', b: '2'}
+
+
+// 21.
+function copyAndModify(obj) {
+    const copy = obj;  
+    copy.name = 'Modified';
+    return copy;
+}
+
+const original1 = { name: 'Original' };
+copyAndModify(original1);
+console.log(original1.name);  // Expected: 'Original'
+
+
+// 22.
+function shallowArrayCopy(arr) {
+    const copy = arr.slice();
+    copy[0][0] = 999;
+    return copy;
+}
+
+const original2 = [[1,2],[3,4]];
+shallowArrayCopy(original2);
+console.log(original2[0][0]);  // Expected: 1
+
+
+// 23.
+function deepClone(obj) {
+    const clone = { ...obj };
+    clone.nested.value = 42;
+    return clone;
+}
+
+const original3 = { nested: { value: 1 } };
+deepClone(original3);
+console.log(original3.nested.value);  // Expected: 1
+
+
+// 24.
+function cloneArrayOfObjects(arr) {
+    return arr.map(item => item);
+}
+
+const original4 = [{ x: 1 }, { x: 2 }];
+const cloned4 = cloneArrayOfObjects(original4);
+cloned4[0].x = 99;
+console.log(original4[0].x);  // Expected: 1
+
+
+// 25.
+function deepCopyWithJSON(obj) {
+    const clone = JSON.parse(JSON.stringify(obj));
+    clone.func = () => 'hello';
+    return clone;
+}
+
+const original5 = { func: () => 'hi' };
+const copy5 = deepCopyWithJSON(original5);
+console.log(copy5.func());  // Expected: 'hello'
