@@ -216,11 +216,15 @@ console.log(original4[0].x);  // Expected: 1
 
 // 25.
 function deepCopyWithJSON(obj) {
-    const clone = JSON.parse(JSON.stringify(obj));
-    clone.func = () => 'hello';
-    return clone;
+    return JSON.parse(JSON.stringify(obj));
 }
 
-const original5 = { func: () => 'hi' };
-const copy5 = deepCopyWithJSON(original5);
-console.log(copy5.func());  // Expected: 'hello'
+const original = {
+    date: new Date('2023-01-01T00:00:00Z')
+};
+
+const copy = deepCopyWithJSON(original);
+
+console.log('Original:', original.date instanceof Date);  // true
+console.log('Copy:', copy.date instanceof Date);          // Expected: true
+console.log('Copy value:', copy.date);                    // Expected: same date
