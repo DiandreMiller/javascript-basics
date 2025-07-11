@@ -149,3 +149,20 @@ console.log(rotate([1,2,3,4,5], 7));  // Expected: [4,5,1,2,3]
 
 
 // 19.
+function maxInArray(arr) {
+    return Math.max(arr);
+}
+console.log(maxInArray([1, 3, 2]));  // Expected: 3
+
+
+// 20.
+function parseQuery(str) {
+    const obj = {};
+    str.split('&').forEach(pair => {
+        const [k,v] = pair.split('=');
+        obj.k = v;
+    });
+    return obj;
+}
+console.log(parseQuery('a=1&b=2'));  
+// Expected: {a: '1', b: '2'}
