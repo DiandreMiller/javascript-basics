@@ -25,9 +25,26 @@
  
 var rotate = function(nums, k) {
 
+    const remainerRotation = k % nums.length;
+
+    const emptyArray = new Array(nums.length);
+
+    let first = 0;
+
+    for(let i = remainerRotation; i < nums.length; i++) {
+        emptyArray[i] = nums[first];
+        first++;
+    }
+
+    const remainingNumbers = nums.slice(-remainerRotation);
+
+    for(let i = 0; i < remainingNumbers.length; i++) {
+        emptyArray[i] = remainingNumbers[i];
+    }
+    return emptyArray;
 };
 
-console.log('rotate:', rotate([1,2,3,4,5,6,7], 17));
+// console.log('rotate:', rotate([-1,-100,3,99], 2));
 // Given an integer array nums, return true if any value appears at least twice in the array, and 
 // return false if every element is distinct.
 
@@ -67,11 +84,21 @@ console.log('rotate:', rotate([1,2,3,4,5,6,7], 17));
 // -109 <= nums[i] <= 109
 
 function containsDuplicate(nums) {
-   
+
+    const DuplicateMap = new Map();
+
+    for(let i = 0; i < nums.length; i++) {
+        if(!DuplicateMap.has(nums[i])) {
+            DuplicateMap.set(nums[i], 1)
+        } else {
+            return true
+        }
+    }
+   return false;
 }
 
 
-console.log('containsDuplicate:', containsDuplicate([1,1,1,3,3,4,3,2,4,2]));
+// console.log('containsDuplicate:', containsDuplicate([1,2,3,4]));
 
 // Given an array nums of n integers where nums[i] is in the range [1, n], return an array of 
 // all the integers in the range [1, n] that do not appear in nums.
@@ -96,9 +123,39 @@ console.log('containsDuplicate:', containsDuplicate([1,1,1,3,3,4,3,2,4,2]));
 
 function findDisappearedNumbers(nums) {
 
+   const IndexMap = new Map();
+
+   const NumberArray = new Array(nums.length);
+
+   let end = nums.length - 1;
+
+   for(let i = nums.length; i > 0; i--) {
+    NumberArray[end] = i;
+    end--;
+   }
+
+   console.log('NumberArray:', NumberArray);
+
+   for(let i = 0; i < NumberArray.length; i++) {
+    if(!IndexMap.has(NumberArray[i])) {
+        IndexMap.set(NumberArray[i], true);
+    }
+   }
+
+   console.log('IndexMap:', IndexMap);
+
+   for(let i = 0; i < nums.length; i ++) {
+    if(IndexMap.has(nums[i])) {
+        IndexMap.delete(nums[i])
+    }
+   }
+
+   console.log('IndexMap after delete:', IndexMap);
+
+   return Array.from(IndexMap.keys());
 };
 
-console.log('findDisappearedNumbers:', findDisappearedNumbers([4,3,2,7,8,2,3,1]));
+// console.log('findDisappearedNumbers:', findDisappearedNumbers([1,1]));
 
 // Given two sorted arrays nums1 and nums2, merge them into one sorted array.
 
@@ -120,10 +177,35 @@ console.log('findDisappearedNumbers:', findDisappearedNumbers([4,3,2,7,8,2,3,1])
 // 0 <= a[i], b[i] <= 107
 
 function mergeArrays(nums1, nums2) {
-   
+
+    const sortedArray = [];
+
+    let firstArrayStart = 0;
+    let secondArrayStart = 0
+
+    let combinedLength = nums1.length + nums2.length;
+
+    while(combinedLength > 0) {
+        if(nums1[firstArrayStart] < nums2[secondArrayStart] || nums2[secondArrayStart] === undefined) {
+            sortedArray.push(nums1[firstArrayStart]);
+            firstArrayStart++;
+            combinedLength--;
+        } else if (nums1[firstArrayStart] === nums2[secondArrayStart]) {
+            sortedArray.push(nums1[firstArrayStart], nums2[secondArrayStart]);
+            firstArrayStart++;
+            secondArrayStart++
+            combinedLength -= 2;
+        } else if(nums2[secondArrayStart] < nums1[firstArrayStart] || nums1[firstArrayStart] === undefined) {
+            sortedArray.push(nums2[secondArrayStart])
+            secondArrayStart++;
+            combinedLength--;
+        }
+    }
+    
+   return sortedArray;
 }
 
-console.log('mergeArrays:', mergeArrays([2, 4, 7, 10], [2, 3]));
+console.log('mergeArrays:', mergeArrays([1], [1,1,1,1]));
 
 
 // Given an array of integers arr, return true if and only if it is a valid mountain array.
@@ -157,6 +239,29 @@ console.log('mergeArrays:', mergeArrays([2, 4, 7, 10], [2, 3]));
 
 function validMountainArray(arr) {
 
- 
+    let start = 0;
+    let next = 1;
+    const max = Math.max(...arr);
+
+    if (arr[0] === max || arr[arr.length - 1] === max) {
+        return false;
+    }
+
+    while (arr[start] < arr[next]) {
+        start++;
+        next++;
+    }
+
+    if (arr[start] === max) {
+        while (next < arr.length && arr[start] > arr[next]) {
+            start++;
+            next++;
+        }
+    } else {
+        return false;
+    }
+
+    return next === arr.length;
 }
 
+// console.log('validMountainArray:', validMountainArray([1]));
