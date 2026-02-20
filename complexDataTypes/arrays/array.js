@@ -265,3 +265,50 @@ function validMountainArray(arr) {
 }
 
 console.log('validMountainArray:', validMountainArray([1]));
+
+
+// Move Zeroes (in-place)
+
+// Given an integer array nums, move all 0’s to the end of it while maintaining the relative 
+// order of the non-zero elements.
+
+// You must do this in-place (modify nums), using O(1) extra space.
+
+// Example 1
+
+// Input: nums = [0,1,0,3,12]
+// Output: [1,3,12,0,0]
+
+// Example 2
+
+// Input: nums = [0]
+// Output: [0]
+
+// Constraints
+	// •	1 <= nums.length <= 10^5
+	// •	-2^31 <= nums[i] <= 2^31 - 1
+
+
+    const moveZeroes = function(nums) {
+        let start = 0;
+        let next = 1;
+
+        while(next < nums.length) {
+            if(nums[start] === 0 && nums[next] !== 0) {
+                nums[start] = nums[next];
+                nums[next] = 0;
+                start++;
+                next++;
+            } else if(nums[start] === 0 && nums[next] === 0) {
+                next++;
+             } else {
+                start++;
+                next++; 
+            }
+
+        }
+
+        return nums;
+    }
+
+    console.log('moveZeroes:', moveZeroes([0,1,0,3,12]));
