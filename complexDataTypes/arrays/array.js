@@ -264,4 +264,4 @@ function validMountainArray(arr) {
     return next === arr.length;
 }
 
-// console.log('validMountainArray:', validMountainArray([1]));
+console.log('validMountainArray:', validMountainArray([1]));
