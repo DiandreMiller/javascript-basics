@@ -314,4 +314,3 @@ console.log('validMountainArray:', validMountainArray([1]));
     console.log('moveZeroes:', moveZeroes([0,1,0,3,12]));
 
 
-    //another
